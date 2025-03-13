@@ -47,6 +47,7 @@ class FormsTest(TestCase):
         form = DriverLicenseUpdateForm(data=form_data)
         self.assertFalse(form.is_valid())
 
+
 class ModelsTest(TestCase):
     """
     We create a superuser because we inherit the Driver from AbstractUser
@@ -104,6 +105,7 @@ DRIVER_DETAIL_URL = reverse("taxi:driver-detail", kwargs={"pk": 1})
 MANUFACTURER_URL = reverse("taxi:manufacturer-list")
 CAR_LIST_URL = reverse("taxi:car-list")
 CAR_DETAIL_URL = reverse("taxi:car-detail", kwargs={"pk": 1})
+
 
 class PublicViewsTest(TestCase):
     def test_home_page_login_required(self):
